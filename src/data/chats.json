@@ -1,0 +1,79 @@
+{
+  "conversations": [
+    {
+      "id": "g-1",
+      "type": "group",
+      "name": "Family Group",
+      "participants": 6,
+      "accent": "#22c55e",
+      "messages": [
+        {
+          "id": 1,
+          "sender": "Mom",
+          "content": "Dinner is ready at 8 PM 🍽️",
+          "time": "7:12 PM",
+          "attachments": []
+        },
+        {
+          "id": 2,
+          "sender": "You",
+          "content": "Awesome! I will be there.",
+          "time": "7:15 PM",
+          "attachments": []
+        },
+        {
+          "id": 3,
+          "sender": "You",
+          "content": "Stored through backend",
+          "attachments": [],
+          "time": "12:07 PM"
+        }
+      ]
+    },
+    {
+      "id": "g-2",
+      "type": "group",
+      "name": "Project Phoenix",
+      "participants": 9,
+      "accent": "#2563eb",
+      "messages": [
+        {
+          "id": 1,
+          "sender": "Aisha",
+          "content": "Can we push the release to Friday?",
+          "time": "9:02 AM",
+          "attachments": []
+        },
+        {
+          "id": 2,
+          "sender": "You",
+          "content": "Yes, I am updating the timeline now.",
+          "time": "9:08 AM",
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "id": "d-1",
+      "type": "direct",
+      "name": "Rahul",
+      "accent": "#f97316",
+      "messages": [
+        {
+          "id": 1,
+          "sender": "Rahul",
+          "content": "Are we still on for coffee?",
+          "time": "11:50 AM",
+          "attachments": []
+        },
+        {
+          "id": 2,
+          "sender": "You",
+          "content": "Yep! Let us meet at 5 ☕",
+          "time": "11:55 AM",
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}
