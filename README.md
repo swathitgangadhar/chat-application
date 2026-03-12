@@ -1,16 +1,27 @@
-
 # Chat application
 
-chat application with these technologies and features. This version includes:
+Chat application with these technologies and features:
 
-Backend with Node.js + Express + PostgreSQL
+- Backend with Node.js + file-backed API server
+- Frontend with React
+- REST API for messages and conversations
+- Dark/Light mode toggle
+- Mobile responsiveness
 
-Frontend with React
+## Run locally
 
-User authentication
+Use **two terminals** so the frontend can reach the backend API:
 
-REST API for messages
+1. Start backend (port 5000):
 
-Dark/Light mode toggle
+```bash
+npm run server
+```
 
-Mobile responsiveness
+2. Start frontend (port 3000):
+
+```bash
+npm start
+```
+
+The frontend proxies `/api/*` calls to `http://localhost:5000`.
