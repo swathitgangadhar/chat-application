@@ -72,6 +72,68 @@ a {
   font-size: 0.8rem;
 }
 
+.actions-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.error-text {
+  color: #b91c1c;
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 600;
+}
+
+.chat-error {
+  margin: 0.75rem 1rem 0;
+}
+
+
+.picker-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+}
+
+.picker-card h3 {
+  margin: 0 0 0.7rem;
+}
+
+.picker-card .shadcn-input + .shadcn-input {
+  margin-top: 0.55rem;
+}
+
+.picker-list {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+}
+
+.picker-item {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.selected-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.65rem 0;
+}
+
+.selected-members span {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+}
+
 .conversation-group + .conversation-group {
   margin-top: 1.5rem;
 }
@@ -252,6 +314,14 @@ a {
 
 .shadcn-button:hover {
   background: var(--primary-dark);
+}
+
+.shadcn-button.secondary {
+  background: #2563eb;
+}
+
+.shadcn-button.secondary:hover {
+  background: #1d4ed8;
 }
 
 .hidden-file-input {

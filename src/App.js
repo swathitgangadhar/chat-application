@@ -1,5 +1,9 @@
 import React, { useMemo, useRef, useState } from 'react';
 import './App.css';
+import { createConversationApi, fetchConversations, sendMessageApi } from './api';
+import { getConversationFromPath, groupConversationsByType } from './chatUtils';
+import DashboardPage from './components/DashboardPage';
+import ChatPage from './components/ChatPage';
 
 const seedConversations = [
   {
@@ -51,11 +55,28 @@ const getConversationFromPath = () => {
 };
 
 function App() {
-  const [conversations, setConversations] = useState(seedConversations);
+  const [conversations, setConversations] = useState([]);
   const [draftMessage, setDraftMessage] = useState('');
   const [selectedFiles, setSelectedFiles] = useState([]);
-  const [activeConversationId] = useState(getConversationFromPath);
+  const [activeConversationId, setActiveConversationId] = useState(getConversationFromPath);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    const loadConversations = async () => {
+      try {
+        const payload = await fetchConversations();
+        setConversations(payload);
+      } catch (_requestError) {
+        setError('Could not load chats from backend.');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadConversations();
+  }, []);
 
   const activeConversation = useMemo(
     () => conversations.find((conversation) => conversation.id === activeConversationId),
